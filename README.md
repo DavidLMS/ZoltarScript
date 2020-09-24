@@ -1,6 +1,8 @@
 # ZoltarScript
 Script básico para la planificación de sesiones semanales de una formación usando una Hoja de Cálculo de Google. Permite generar todas las sesiones y trasladarlas como eventos en un calendario, con la posibilidad de añadir una descripción en cada uno.
 
+**Nota importante**: Este script está en estado alfa, únicamente lo he probado para generar las sesiones de mis módulos y ha funcionado correctamente de momento. El código es muy poco elegante, lo justo para que funcione. Intentaré mejorarlo con el paso del tiempo, también puedes ayudarme a ello usando un pull request.
+
 ## Instalación
 Para comenzar a usar el script, necesitas **abrir una Hoja de Cálculo de Google** donde quieras ejecutarlo.
 
