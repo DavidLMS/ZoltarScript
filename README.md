@@ -46,3 +46,6 @@ Solo un par de aclaraciones:
 - La columna opcional **Comentarios** es para rellenarla después de realizar cada sesión, pudiendo utilizarse para proponer mejoras de la misma. No tiene ningún efecto en el script, y no se traslada a ninguna parte.
 - No es necesario escribir el desarrollo de una sola vez en todas las sesiones, puedes rellenar solamente una semana, por ejemplo. Cuando rellenes la siguiente semana, [borra el Calendario de Google](https://support.google.com/calendar/answer/37188?co=GENIE.Platform%3DDesktop&hl=es) y pulsa de nuevo en **ZoltarScript -> Trasladar a calendario** para sincronizar los eventos.
 
+## Contribuye
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W714LIE)
