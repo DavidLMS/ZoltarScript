@@ -52,6 +52,6 @@ Puedes hacerlo de muchas maneras:
 
 - [Crea un issue para proponer una nueva función o indicar un error](https://github.com/DavidLMS/ZoltarScript/issues).
 - [Mejora el script y solicita un pull request](https://github.com/DavidLMS/ZoltarScript/pulls).
-- [Invítame a un café](https://ko-fi.com/davidlms).
+- [Invítame a un café](https://ko-fi.com/davidlms):
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W714LIE)
