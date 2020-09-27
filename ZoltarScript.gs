@@ -5,7 +5,7 @@ function onOpen() {
       .addSeparator()
       .addItem('Generar sesiones', 'Generar_Sesiones')
       .addSeparator()
-      .addItem('Trasladar a calendario', 'Trasladar_Calendario')
+      .addItem('Sincronizar calendario', 'Sincronizar_Calendario')
       .addToUi();
 }
 
@@ -142,7 +142,7 @@ function addDays(date, days) {
   return result;
 }
 
-function Trasladar_Calendario(){
+function Sincronizar_Calendario(){
 
   var hoja = SpreadsheetApp.getActive().getActiveSheet();
   
@@ -171,10 +171,16 @@ function Trasladar_Calendario(){
     var fechaInicio = fecha.setHours(hora.getHours(),hora.getMinutes()-24);
     
     var fechaFinal = fecha.setHours(hora.getHours()+1,hora.getMinutes()-24);
-
-    calendario.createEvent(asignatura,new Date(fechaInicio),new Date(fechaFinal), {description: descripcion});
+    
+    var eventos = calendario.getEvents(new Date(fechaInicio), new Date(fechaFinal));
+    
+    //Si ya existe el evento, solamente actualizamos la descripción
+    if(eventos.length == 1 && eventos[0].getTitle() == asignatura){ 
+      eventos[0].setDescription(descripcion);
+    } else {
+      calendario.createEvent(asignatura,new Date(fechaInicio),new Date(fechaFinal), {description: descripcion});
+    }
   
   }
-
 
 }
