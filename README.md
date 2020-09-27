@@ -26,7 +26,7 @@ Te pedirá que le des permisos al script, inicia sesión con tu cuenta de Google
 
 La primera vez que vayas a usarlo en una Hoja de Cálculo de Google, elige la opción en el menú **ZoltarScript -> Preparar hoja**. Esto borrará todo lo que tengas previamente en esa hoja y escribirá las cabeceras necesarias para la ejecución del script.
 
-En la celda debajo de Calendario pones el **nombre del Calendario de Google** en el que se crearán los eventos con las sesiones. Si el calendario no existe, lo creará. Te recomiendo que pongas el nombre **de uno que no exista**. El script de momento **no sincroniza eventos**, sino que los creará todos de nuevo. Lo más fácil es borrar el calendario previo, para que se cree uno nuevo cada vez que realicemos una modificación en las sesiones. Si esto lo haces en tu calendario personal, te puedes encontrar con eventos duplicados muy tediosos de eliminar.
+En la celda debajo de Calendario pones el **nombre del Calendario de Google** en el que se crearán los eventos con las sesiones. Si el calendario no existe, lo creará.
 
 En **Fecha inicio** pones la fecha a partir de la cuál se crearán las sesiones. Y en **Fecha fin** el último día que podrá tener sesiones.
 
@@ -40,11 +40,11 @@ Si pulsas en el menú **ZoltarScript -> Generar sesiones**, se rellenará una fi
 
 Ahora puedes comenzar a planificar, escribiendo en la columna **Desarrollo** lo que harás en cada sesión.
 
-Cuando termines, pulsa en el menú **ZoltarScript -> Trasladar a calendario**. El script creará un evento en el calendario indicado en la primera columna con cada sesión, incluyendo el desarrollo en la descripción. Si quieres puedes exportarlo en formato .icalc para importar las sesiones en tu aplicación favorita de calendario (si no tuviese la posibilidad de sincronizarse con un Calendario de Google).
+Cuando termines, pulsa en el menú **ZoltarScript -> Sincronizar calendario**. El script creará un evento en el calendario (indicado en la primera columna) con cada sesión, incluyendo el desarrollo en la descripción. Si quieres puedes exportarlo en formato .icalc para importar las sesiones en tu aplicación favorita de calendario (si no tuviese la posibilidad de sincronizarse con un Calendario de Google).
 
 Solo un par de aclaraciones:
 - La columna opcional **Comentarios** es para rellenarla después de realizar cada sesión, pudiendo utilizarse para proponer mejoras de la misma. No tiene ningún efecto en el script, y no se traslada a ninguna parte.
-- No es necesario escribir el desarrollo de una sola vez en todas las sesiones, puedes rellenar solamente una semana, por ejemplo. Cuando rellenes la siguiente semana, [borra el Calendario de Google](https://support.google.com/calendar/answer/37188?co=GENIE.Platform%3DDesktop&hl=es) y pulsa de nuevo en **ZoltarScript -> Trasladar a calendario** para sincronizar los eventos.
+- No es necesario escribir el desarrollo de una sola vez en todas las sesiones, puedes rellenar solamente una semana, por ejemplo. Cuando rellenes la siguiente semana, pulsa de nuevo en **ZoltarScript -> Sincronizar calendario** para actualizar los eventos.
 
 ## ¿Quieres colaborar?
 
