@@ -46,6 +46,10 @@ Solo un par de aclaraciones:
 - La columna opcional **Comentarios** es para rellenarla después de realizar cada sesión, pudiendo utilizarse para proponer mejoras de la misma. No tiene ningún efecto en el script, y no se traslada a ninguna parte.
 - No es necesario escribir el desarrollo de una sola vez en todas las sesiones, puedes rellenar solamente una semana, por ejemplo. Cuando rellenes la siguiente semana, pulsa de nuevo en **ZoltarScript -> Sincronizar calendario** para actualizar los eventos.
 
+Podéis ver un vídeo del funcionamiento a continuación:
+
+[![Vídeo demostración del funcionamiento de ZoltarScript](https://img.youtube.com/vi/2-NzMZNhYNc/0.jpg)](https://www.youtube.com/watch?v=2-NzMZNhYNc)
+
 ## ¿Quieres colaborar?
 
 Puedes hacerlo de muchas maneras:
