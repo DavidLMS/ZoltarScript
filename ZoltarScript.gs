@@ -33,7 +33,7 @@ function Generar_Sesiones() {
   
   var hoja = SpreadsheetApp.getActive().getActiveSheet();
   
-  var diasFestivos = hoja.getRange(2, 7, hoja.getRange(2, 7, hoja.getLastRow()).getValues().filter(String).length).getValues()
+  var diasFestivos = hoja.getRange(2, 7, hoja.getRange(2, 7, hoja.getLastRow()).getValues().filter(String).length).getValues();
   
   var fechaActual, fechaFinal;
   
