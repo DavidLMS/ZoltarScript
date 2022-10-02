@@ -42,6 +42,18 @@ Ahora puedes comenzar a planificar, escribiendo en la columna **Desarrollo** lo 
 
 Cuando termines, pulsa en el menú **ZoltarScript -> Sincronizar calendario**. El script creará un evento en el calendario (indicado en la primera columna) con cada sesión, incluyendo el desarrollo en la descripción. Si quieres puedes exportarlo en formato .icalc para importar las sesiones en tu aplicación favorita de calendario (si no tuviese la posibilidad de sincronizarse con un Calendario de Google).
 
+Si pulsas en el menú **ZoltarScript -> Generar fichas**, se Genera fichas de alumnado, en base a las iniciales que tienen que empezar en la 3 fila, columna 1....
+
+Si tienes una lista de alumnado, tal que asi:
+
+ALS | Antonio López Sanchez
+LFC | Lucia Ferrete Cañabate
+
+Generará dos hojas, con nombres ALS y LFC. La plantilla es fija pero en una posible mejora se podría especificar que se recogiera de una hoja en la que se almacene las repuestas a un formulario.
+
+Si pulsas en el menú **ZoltarScript -> Crea indice**, en una hoja que se llame **Inicio** (está hoja tiene que estar creada), se generará un indice con enlaces a todas las hojas que hay en el documento. Y desde las distintas hojas, en la celda 1,1 habrá un enlace a la hoja Inicio. Si se añanden o aeliminas hojas se puede pulsar de nuevo y se generará el indice de nuevo.
+
+
 Solo un par de aclaraciones:
 - La columna opcional **Comentarios** es para rellenarla después de realizar cada sesión, pudiendo utilizarse para proponer mejoras de la misma. No tiene ningún efecto en el script, y no se traslada a ninguna parte.
 - No es necesario escribir el desarrollo de una sola vez en todas las sesiones, puedes rellenar solamente una semana, por ejemplo. Cuando rellenes la siguiente semana, pulsa de nuevo en **ZoltarScript -> Sincronizar calendario** para actualizar los eventos.
