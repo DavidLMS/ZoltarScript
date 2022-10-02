@@ -52,7 +52,7 @@ LFC | Lucia Ferrete Cañabate
 
 Generará dos hojas, con nombres ALS y LFC. La plantilla es fija pero en una posible mejora se podría especificar que se recogiera de una hoja en la que se almacene las repuestas a un formulario.
 
-Si pulsas en el menú **ZoltarScript -> Crea indice**, en una hoja que se llame **Inicio** (está hoja tiene que estar creada), se generará un indice con enlaces a todas las hojas que hay en el documento. Y desde las distintas hojas, en la celda 1,1 habrá un enlace a la hoja Inicio. Si se añanden o aeliminas hojas se puede pulsar de nuevo y se generará el indice de nuevo.
+Si pulsas en el menú **ZoltarScript -> Crea indice**, en una hoja que se llame **Inicio** (está hoja tiene que estar creada), se generará un indice con enlaces a todas las hojas que hay en el documento. Y desde las distintas hojas, en la celda 1,1 habrá un enlace a la hoja Inicio. Si se añaden o eliminan hojas se puede pulsar de nuevo y se generará el indice de nuevo.
 
 
 Solo un par de aclaraciones:
