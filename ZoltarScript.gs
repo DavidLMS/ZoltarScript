@@ -6,6 +6,10 @@ function onOpen() {
       .addItem('Generar sesiones', 'Generar_Sesiones')
       .addSeparator()
       .addItem('Sincronizar calendario', 'Sincronizar_Calendario')
+      .addSeparator()
+      .addItem('Generar fichas', 'Generar_Fichas')
+      .addSeparator()
+      .addItem('Crea indice', 'indiceDinamico')
       .addToUi();
 }
 
@@ -29,7 +33,7 @@ function Generar_Sesiones() {
   
   var hoja = SpreadsheetApp.getActive().getActiveSheet();
   
-  var diasFestivos = hoja.getRange(2, 7, hoja.getRange(2, 7, hoja.getLastRow()).getValues().filter(String).length).getValues();
+  var diasFestivos = hoja.getRange(2, 7, hoja.getRange(2, 7, hoja.getLastRow()).getValues().filter(String).length).getValues()
   
   var fechaActual, fechaFinal;
   
@@ -168,9 +172,9 @@ function Sincronizar_Calendario(){
     var fecha = new Date(fecha);
     var hora = new Date(hora);
     
-    var fechaInicio = fecha.setHours(hora.getHours(),hora.getMinutes()-24);
+    var fechaInicio = fecha.setHours(hora.getHours(),hora.getMinutes()+25);
     
-    var fechaFinal = fecha.setHours(hora.getHours()+1,hora.getMinutes()-24);
+    var fechaFinal = fecha.setHours(hora.getHours()+1,hora.getMinutes()+25);
     
     var eventos = calendario.getEvents(new Date(fechaInicio), new Date(fechaFinal));
     
@@ -183,4 +187,81 @@ function Sincronizar_Calendario(){
   
   }
 
+}
+
+function Generar_Fichas() {
+
+  var hoja = SpreadsheetApp.getActive().getActiveSheet();
+  
+  var nombreFichas = hoja.getRange(3, 1, hoja.getRange(3, 1, hoja.getLastRow()).getValues().filter(String).length).getValues();
+  
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    
+  for (i in nombreFichas)
+  {
+    var yourNewSheet = activeSpreadsheet.getSheetByName(nombreFichas[i][0]);
+    if (yourNewSheet == null) {
+      yourNewSheet = activeSpreadsheet.insertSheet(nombreFichas[i][0]);
+      creaplantila(yourNewSheet)
+    }
+  }
+}
+
+function creaplantila(hoja) {
+  var spreadsheet = hoja
+  spreadsheet.activate();
+  spreadsheet.getRange('A1').activate();
+  spreadsheet.getCurrentCell().setRichTextValue(SpreadsheetApp.newRichTextValue()
+  .setText('Iniciales')
+  .setTextStyle(0, 9, SpreadsheetApp.newTextStyle()
+  .setBold(true)
+  .build())
+  .build());
+  spreadsheet.getRange('C1').activate();
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getCurrentCell().setValue('Nombre');
+  spreadsheet.getRange('A3').activate();
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getCurrentCell().setValue('Edad');
+  spreadsheet.getRange('A4').activate();
+  spreadsheet.getCurrentCell().setValue('Esdudios anteriores');
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getRange('C4').activate();
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getCurrentCell().setValue('Experiencia Laboral');
+  spreadsheet.getRange('A7').activate();
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+  spreadsheet.getCurrentCell().setValue('Aspiraciones futuras');
+  spreadsheet.getRange('A10').activate();
+  spreadsheet.getCurrentCell().setValue('Observaciones');
+  spreadsheet.getActiveRangeList().setFontWeight('bold');
+};
+
+
+//Funcion para crear un indice con vinculo a todas mis pestañas
+function indiceDinamico() {
+  //Configuracion
+  const nombreInicio = "Inicio";
+  var misHojas = SpreadsheetApp.getActiveSpreadsheet().getSheets();
+  var hojaInicio = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(nombreInicio);
+  var i=2;
+  
+  //Borrar todo el contenido antes de actualizar el indice
+  hojaInicio.getRange(2,1,hojaInicio.getLastRow()).clearContent();
+  
+  //Ciclo que recorre todas las pestañas actuales
+  misHojas.forEach(function(hoja){
+    
+    //Condicional para que no tome la pestaña "Inicio"
+    if(hoja.getName()!=nombreInicio){
+      
+      //Agregue la formula HIPERVINCULO con el nombre y la Id de cada pestaña
+      var formula = '=HYPERLINK("#gid='+hoja.getSheetId()+'";"'+hoja.getName()+'")'
+      hojaInicio.getRange(i,1).setFormula(formula)
+      
+      //Agregue la formula HIPERVINCULO con la pestaña Inicio a cada pestaña, para poder devolverse
+      hoja.getRange(1,1).setFormula('=HYPERLINK("#gid='+hojaInicio.getSheetId()+'";"Ir a Inicio")')
+      i++;
+    } // Cierre If Inicio
+  }) // Cierre Ciclo
 }
