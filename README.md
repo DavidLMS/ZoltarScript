@@ -44,10 +44,11 @@ Cuando termines, pulsa en el menú **ZoltarScript -> Sincronizar calendario**. E
 
 Si pulsas en el menú **ZoltarScript -> Generar fichas**, se Genera fichas de alumnado, en base a las iniciales que tienen que empezar en la 3 fila, columna 1....
 
-Si tienes una lista de alumnado, tal que asi:
-
+Si tienes una lista de alumnado, tal que asi (Recuerda, empezando en la fila 3, columna):
+```
 ALS | Antonio López Sanchez
 LFC | Lucia Ferrete Cañabate
+```
 
 Generará dos hojas, con nombres ALS y LFC. La plantilla es fija pero en una posible mejora se podría especificar que se recogiera de una hoja en la que se almacene las repuestas a un formulario.
 
